@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <div id="app">
+  <!--  Hola {{nombre}}  video 1-->
+    <!--atributo especial para los bue
+v-bind:href  O
+:href solo los dos puntos y despues la variable
+v-if="elemento" si false lo oculta si es tre lo muestar
+com el template no lomuestra en el doom
+  -->
+  <template v-if="mostrar">
+    <!--  <h1>Este es mi titulo</h1>
+      <h2>Este es mi subtitulo</h2> video3-->
+      <!--filtros  recibe | funcion-->
+
+      <h1>{{titulo | uppercase}}</h1>
+      <h2>{{subtitulo | lowercase}}</h2>
+      <!--desafio de un texto el primero en mayuscu-->
+      <h3>{{capital | primeroM}}</h3>
+    <!--video3
+     <a  :href="url" target="_blank">{{pagina}}</a>
+   -->
+    </template>
+    <!--v-show otra forma de mostrar
+  solo un ingresa un elemento de css para ocultar -->
+  <!--  <div v-show="mostrar" >
+      <h1>Mostrar1</h1>
+    </div>
+    <div v-show="!mostrar" >
+      <h1>Mostrar2</h1>
+    </div> video3-->
+
+  </div>
+
+  <!--Mostrar y ocultar con vue.js
+-->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script type="text/javascript">
+        let app= new Vue({
+          el:'#app',
+          data:{
+            //las variables que quieren que se reemplze
+            //nombre:'Rafael!', video 1
+          //  url:'http://www.google.com/',video3
+          //  pagina:'Ir a google',video3
+            mostrar:true,
+            titulo:'Estas en Platzi',
+            subtitulo:'Estas viendo el curso de vue.js',
+            capital:'rafael'
+          },
+          filters:{
+            //atributo de los filtros
+            uppercase: (str)=>{
+                  return str.toUpperCase()
+            },
+            lowercase:(str)=>{
+              return str.toLowerCase()
+            },
+            primeroM:(str)=>{
+              return str.charAt(0).toUpperCase()+str.slice(1)
+            }
+          }
+        })//variable objeto Vue es un json
+        //numeral obten el elemento con id
+    </script>
+  </body>
+</html>

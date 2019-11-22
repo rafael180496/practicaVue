@@ -1,0 +1,65 @@
+
+/*Importante*/
+npm i -g vue-cli  --> intalar el cliente de vuejs
+vue init bootstrap-vue/webpack-simple my-project --> proyecto con webpack simple y bootstrap
+vue init bootstrap-vue/webpack my-project --> proyecto con webpack full y bootstrap
+vue init webpack-simple my-project --> proyecto con webpack simple
+vue init webpack my-project --> proyecto con webpack full
+npm install --> dependencies
+npm run dev --> correr
+npm install vue-router --> intalar vue roouter
+
+
+
+
+{{expresiones}}
+
+
+Mostrar u ocultar elementos - Mediante vi-if:
+// Para un render inicial es recomendable vi-if
+
+    Se engloba los elementos en <template v-if=“mostrar”>
+    Dentro del script utilizar el elemento mostrar como un true
+
+Vue.js utiliza en vez de div un template que es un contenedor
+ invisible o dinámico, que en el navegador desaparece o se destruye.
+ Se usa para agregarle atributos de vue pero que sea “invisible” ante el navegador
+
+Otra manera - Mediante v-show
+// No se puede usar en los <template>, sólo en div o elementos que el navegador entienda
+// Se usa si se va a ocultar o mostrar mucho, si tiene que ver con interacción de
+usuario es preferible usar éste
+
+    dentro de un <div v-show=“mostrar”>
+    o en otro <div v-show="!mostrar">
+
+
+    hacer una single page en vue
+    https://github.com/vuejs-templates/webpack-simple
+
+
+tema Material
+https://vuematerial.io/getting-started
+
+
+//artista
+https://www.last.fm/es/api
+
+# Ensure vue-cli is installed and up to date
+npm i -g vue-cli
+# Initialize a bootstrap project in the directory 'my-project'
+vue init bootstrap-vue/webpack-simple my-project
+# Change into the directory
+cd my-project
+# Install dependencies
+npm i
+# Fire up the dev server with HMR
+npm run dev
+npm install vue-router
+
+
+
+Application name	platzimusic
+API key	70ed16c82db9fea40c9146467ec2dc07
+Shared secret	2057c86ec23962a3eefb33ada3b4e474
+Registered to	rafael180496
